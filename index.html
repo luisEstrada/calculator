@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0072c9">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header__inner">
+            <img class="logoconti" src="imagenes/logobbva.png" alt="BBVA Logo">
+        </div>
+    </header>
+    <main>
+        <section>
+            <section class="principal_content">
+                <div class="content-banner">
+                    <img class="imagen-principal" src="imagenes/credito1.jpg" alt="Beneficios BBVA">
+                    <a class="btn waves-effect light-blue darken-2 btn-soli-credit">Solicitar</a>
+                </div>
+                <article class="descripcion_credito">
+                    <h5 style="color : white; font-weight: bold;">Has realidad tus sueños</h5>
+                    <p class="slogan"style="color: white;">
+                        El BBVA te otorgara un credito con la mejor tasa del mercado.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-field light-blue-text text-darken-2 col s12">
+                                <select>
+                                    <option value="" disabled selected>Tipo de prestamo</option>
+                                    <option value="1">Préstamos Cafae</option>
+                                    <option value="2">Préstamos De Estudio</option>
+                                    <option value="3">Préstamo Auto De Segunda</option>
+                                    <option value="4">Préstamos Libre Disponibilidad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="card-panel">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h4 class="center-align">Simulador de Créditos</h4>
+                                    </div>
+                                </div>
+                                <div class="row" id="card-simulador">
+                                    <div class="card-panel blue lighten-5">
+                                        <div class="row">
+                                            <div class="input-field light-blue-text text-darken-2 col s12">
+                                                <select>
+                                                    <option value="" disabled selected>Moneda</option>
+                                                    <option value="1">Soles</option>
+                                                    <option value="2">Dólares</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input id="monto" type="text" class="validate">
+                                                <label for="monto">Monto</label>
+                                            </div>
+                                            <div class="input-field light-blue-text text-darken-2 col s12">
+                                                <select>
+                                                    <option value="" disabled selected>Plazo de Pago</option>
+                                                    <option value="1">6 meses</option>
+                                                    <option value="2">12 meses</option>
+                                                </select>
+                                            </div>
+                                            <div class="col s12 center-align">
+                                                <div class="content-recaptcha">
+                                                    <div class="g-recaptcha" data-site="normal" data-sitekey="123"></div>
+                                                </div>
+                                                <br/>
+                                                <a class="btn waves-effect light-blue darken-2" id="simular">Simular</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row hide center-align" id="cronograma_loading">
+                                    <div class="preloader-wrapper big active">
+                                        <div class="spinner-layer spinner-blue-only">
+                                            <div class="circle-clipper left">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="gap-patch">
+                                                <div class="circle"></div>
+                                            </div>
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row hide" id="content_cronograma_credito">
+
+                                    <ul class="collapsible expandable popout" id="">
+                                        <li>
+                                            <div class="collapsible-header">
+                                                <div style="width:50%">
+                                                    <i class="material-icons">date_range</i>
+                                                    6 meses
+                                                </div>
+                                                <div style="width:50%" class="right-align">
+                                                    S/1,500
+                                                </div>
+                                            </div>
+                                            <div class="collapsible-body">
+                                                <span>Detalle del credito en 6 meses</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">
+                                                <div style="width:50%">
+                                                    <i class="material-icons">date_range</i>
+                                                    12 meses
+                                                </div>
+                                                <div style="width:50%" class="right-align">
+                                                    S/3,000
+                                                </div>
+                                            </div>
+                                            <div class="collapsible-body">
+                                                <span>Detalle del credito en 12 meses</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">
+                                                <div style="width:50%">
+                                                    <i class="material-icons">date_range</i>
+                                                    24 meses
+                                                </div>
+                                                <div style="width:50%" class="right-align">
+                                                    S/4,500
+                                                </div>
+                                            </div>
+                                            <div class="collapsible-body">
+                                                <span>Detalle del credito en 24 meses</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="center-align">
+                                        <a class="btn-floating btn-large waves-effect waves-light light-blue darken-2">
+                                            <i class="material-icons">arrow_back</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="center-align">
+                <div class="container">
+                    <div class="row">
+                        <ul id="tabs-swipe-demo" class="tabs light-blue-text text-darken-2">
+                            <li class="tab col s6 m6 l6 xl6">
+                                <a href="#test-swipe-1">Requisitos</a>
+                            </li>
+                            <li class="tab col s6 m6 l6 xl6">
+                                <a class="active" href="#test-swipe-2">Beneficios</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="test-swipe-1" class="col s12 m6 l6 requisitos-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12 m6 l6 xl6">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="imagenes/check_document.jpeg">
+                                        <span class="card-title">Documentacion</span>
+                                    </div>
+                                    <div class="card-content left-align">
+
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Requisito 1</p>
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Requisito 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l6 xl6">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="imagenes/check_document.jpeg">
+                                        <span class="card-title">Generales</span>
+                                    </div>
+                                    <div class="card-content left-align">
+
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Requisito 3</p>
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Requisito 4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="test-swipe-2" class="col s12 m6 l6 beneficios-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12 m6 l6 xl6">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="imagenes/check_document.jpeg">
+                                        <span class="card-title">Documentacion</span>
+                                    </div>
+                                    <div class="card-content left-align">
+
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Beneficio 1</p>
+                                        <p>
+                                            <span class="material-icons">chevron_right</span>Beneficio 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Descubre mas del BBVA</h4>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Prestamos</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Tarjetas</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Cuentas de Ahorro</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Credito Hipotecario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 BBVA Copyright
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+img{
+    width: 100%;
+}
+
+.principal_content{
+    position: relative;
+}
+
+.imagen-principal{
+    height: 235px;
+    -webkit-filter: brightness(66%);
+    filter: brightness(66%);
+    height: 100%;
+} 
+
+.content-banner{
+    position: relative;
+    bottom: 7px;
+}
+
+.btn-soli-credit{
+    position: absolute;
+    bottom: 12%;
+    left: 2%;
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #0072c9; /* no need for !important :) */
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #0072c9 !important;
+  }
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid #0072c9 !important;
+    box-shadow: 0 1px 0 0 #0072c9 !important;
+  }
+
+  /* label underline focus color */
+  .row .input-field input {
+    border-bottom: 1px solid #0072c9 !important;
+    box-shadow: 0 1px 0 0 #0072c9 !important;
+  }
+
+  .requisitos-item, .beneficios-item{  
+    min-height: 300px;
+  }
+
+
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: white !important;
+    color: #0072c9;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #0072c9;
+}
+
+.tabs .tab a {
+    color: #0072c9 !important;
+}
+
+.tabs .indicator {
+    background-color: #0072c9 !important;
+}
+
+.descripcion_credito{
+    position: absolute;
+    bottom: 41%;
+    left: 2%;
+}
+
+.logoconti{
+    width: 50%;
+}
+
+.page-footer{
+    background-color: #0072c9;
+}
+
+.content-recaptcha{
+    width: 304px;
+    margin: 0 auto;
+}
+
+h5 .slogan {
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width : 420px){
+    .card-panel{
+        padding: 2px !important;
+    }
+}
+
+@media screen and (max-width: 500px){ 
+    #rc-imageselect, .g-recaptcha {
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+
+    .content-recaptcha{
+        width: 234px;
+        margin: 0 auto;
+    }
+} 
+
+@media screen and (min-width:500px){
+    .descripcion_credito{
+        bottom: 24%;
+    }   
+}
+
+
+@media screen and (min-width:800px){
+    .logoconti{
+        width: 30%;
+    }
+
+    h5{
+        color: white;
+        font-weight: bold;
+        font-size: 4.5rem;
+    }
+
+    .slogan{
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (min-width:1280px){
+    .principal_content, .header__inner{
+        width: 1280px;
+        margin: 0 auto;
+    }
+}
